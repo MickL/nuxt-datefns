@@ -1,9 +1,8 @@
-import { subDays } from "date-fns"
-
 export default defineEventHandler((event) => {
-    const yesterday = subDays(new Date(), 1);
+    const yesterday = new Date();
 
     return {
         someDate: Date.now(),
+        otherDate: yesterday.getTime(),
     }
 })
